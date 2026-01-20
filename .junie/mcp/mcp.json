@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "/Users/arina/.config/herd-lite/bin/php",
+            "args": [
+                "/Users/arina/Projects/medstone1/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
