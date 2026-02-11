@@ -4,14 +4,44 @@
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src:
+
+        url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src:
+
+        url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Denistina';
+    src:
+        local('Denistina'),
+        url('../fonts/Denistina.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --font-sans:
-        Instrument Sans, ui-sans-serif, system-ui, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-        'Noto Color Emoji';
 
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
@@ -59,6 +89,23 @@
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
+
+    --shadow-custom: 0 4px 20px 0 #3a1f200f;
+}
+
+@theme {
+    --font-sans: 'SFProDisplay', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'PlayfairDisplay', serif;
+
+    --color-basic-brown: #66554b;
+    --color-light-brown: #b39b8c;
+    --color-dark-brown: #3a1f20;
+    --color-light-white: #fcf8f9;
+    --color-basic-gray: #e2e2e2;
+    --color-light-gray: #979797;
+    --color-basic-beige: #ecdfcf;
+
+    --my-button-radius: 40px;
 }
 
 /*
@@ -80,12 +127,135 @@
 }
 
 @layer utilities {
-    body,
+    .shadow-custom {
+        box-shadow: var(--shadow-custom);
+    }
+
     html {
-        --font-sans:
-            'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
-            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-            'Noto Color Emoji';
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: SFProDisplay, ui-sans-serif, system-ui, sans-serif;
+        background-color: var(--color-white);
+        color: var(--color-basic-brown);
+    }
+
+    section {
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: 640px) {
+        section {
+            margin-bottom: 100px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        section {
+            margin-bottom: 150px;
+        }
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .swiper-bleed {
+        width: 100%;
+        padding-left: 35px;
+    }
+
+    @media (min-width: 640px) {
+        .container {
+            max-width: 640px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .swiper-bleed {
+            padding-left: calc((100vw - 640px) / 2 + 10px);
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 768px;
+        }
+
+        .swiper-bleed {
+            padding-left: calc((100vw - 768px) / 2 + 10px);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            max-width: 1024px;
+        }
+
+        .swiper-bleed {
+            padding-left: calc((100vw - 1024px) / 2 + 10px);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .container {
+            max-width: 1280px;
+        }
+
+        .swiper-bleed {
+            padding-left: calc((100vw - 1280px) / 2 + 10px);
+        }
+
+    }
+
+    @media (min-width: 1536px) {
+        .container {
+            max-width: 1536px;
+        }
+
+        .swiper-bleed {
+            padding-left: calc((100vw - 1536px) / 2 + 10px);
+        }
+
+    }
+
+    .second-title {
+        font-size: 30px;
+        line-height: 90%;
+    }
+
+    @media (min-width: 640px) {
+        .second-title {
+            font-size: 36px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .second-title {
+            font-size: 42px;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .second-title {
+            font-size: 60px;
+        }
+    }
+
+    #gallery .swiper-slide {
+        opacity: 0.5;
+        filter: blur(1px);
+        transform: scale(0.5);
+    }
+
+    #gallery .swiper-slide-active {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
     }
 }
 
@@ -166,7 +336,8 @@
     * {
         @apply border-border outline-ring/50;
     }
+
     body {
-        @apply bg-background text-foreground;
+        @apply text-foreground;
     }
 }
