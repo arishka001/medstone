@@ -16,13 +16,13 @@ export function accordion() {
                 const a = acc.querySelector('.faq-answer');
                 const ar = acc.querySelector('.faq-arrow');
 
-                b.classList.remove('bg-yellow-950');
+                b.classList.remove('bg-basic-brown');
                 ar.classList.remove('rotate-180', 'text-white');
                 a.classList.add('hidden');
             });
 
             if (!isOpen) {
-                btn.classList.add('bg-yellow-950');
+                btn.classList.add('bg-basic-brown');
                 arrow.classList.add('rotate-180', 'text-white');
                 answer.classList.remove('hidden');
             }

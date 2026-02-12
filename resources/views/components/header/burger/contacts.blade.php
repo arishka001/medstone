@@ -1,5 +1,5 @@
 <div
-    {{ $attributes->merge(['class' => 'grid-cols-1items-start grid gap-7.5 sm:grid-cols-2']) }}
+    {{ $attributes->merge(['class' => 'grid-cols-1 items-start grid gap-7.5 sm:grid-cols-2']) }}
 >
     <div class="flex w-full flex-col gap-2.5">
         <x-contacts.telephone
@@ -13,7 +13,7 @@
     </div>
 
     <div class="flex flex-col gap-7.5 sm:gap-5">
-        <div class="flex flex-col gap-0.5 lg:gap-1.5">
+        <div class="flex flex-col gap-1.5">
             <x-contacts.address
                 class="text-xl sm:text-2xl/[100%] lg:text-3xl/[100%]"
             />

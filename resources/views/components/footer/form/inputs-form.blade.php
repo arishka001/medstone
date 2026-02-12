@@ -4,7 +4,7 @@
             type="text"
             name="name"
             placeholder="{{ __('footer.form.name') }}"
-            class="h-15 w-full rounded-3xl bg-[#776459] px-5"
+            class="h-15 w-full rounded-3xl bg-[#776459] px-5 outline-0"
         />
     </label>
 
@@ -13,7 +13,7 @@
             type="text"
             name="number"
             placeholder="{{ __('footer.form.number') }}"
-            class="h-15 w-full rounded-3xl bg-[#776459] px-5"
+            class="h-15 w-full rounded-3xl bg-[#776459] px-5 outline-0"
         />
     </label>
 

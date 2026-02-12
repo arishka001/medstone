@@ -1,7 +1,7 @@
 <div class="swiper-slide">
     <div @class(['flex flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 xl:p-5'])>
         <div
-            class="flex h-57.5 w-full overflow-hidden rounded-3xl xl:size-68.75 2xl:size-85"
+            class="flex h-57.5 w-full overflow-hidden rounded-3xl xl:h-68.75 2xl:h-85"
         >
             <img
                 src="{{ vite::image('works/' . $item['img']) }}"

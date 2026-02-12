@@ -24,11 +24,11 @@
                 </span>
             </div>
 
-            <button
-                class="flex h-12.5 w-full items-center justify-center rounded-3xl border border-basic-brown text-base/[100%] sm:w-fit sm:px-15"
+            <a
+                class="flex h-12.5 w-full cursor-pointer items-center justify-center rounded-3xl border border-basic-brown text-base/[100%] transition-all duration-300 hover:bg-basic-brown hover:text-light-white sm:w-fit sm:px-15"
             >
                 {{ __('common/reviews.read-button') }}
-            </button>
+            </a>
         </div>
     </div>
 </div>

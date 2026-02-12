@@ -22,7 +22,7 @@ export function scrollWorks() {
     new Swiper(swiper, {
         slidesPerView: 1,
         spaceBetween: 10,
-
+        watchOverflow: true,
         slidesOffsetBefore: getContainerOffset(),
         slidesOffsetAfter: getContainerOffset(),
         modules: [Navigation],

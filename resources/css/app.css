@@ -91,6 +91,8 @@
     --color-sidebar-ring: var(--sidebar-ring);
 
     --shadow-custom: 0 4px 20px 0 #3a1f200f;
+    --shadow-card: 0px 4px 20px 0px #BFA79640;
+
 }
 
 @theme {
@@ -221,6 +223,15 @@
             padding-left: calc((100vw - 1536px) / 2 + 10px);
         }
 
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    .bg-basic-brown {
+        background-color: var(--color-basic-brown);
     }
 
     .second-title {

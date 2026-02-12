@@ -1,5 +1,5 @@
 <div
-    class="hidden flex-col items-center gap-15 rounded-3xl bg-[#FBFBFB] p-2.5 lg:flex"
+    class="group hidden cursor-pointer flex-col items-center gap-15 rounded-3xl bg-[#FBFBFB] p-5 lg:flex"
 >
     <div class="flex flex-col gap-4 p-2.5">
         <h3 class="text-xl/[100%] xl:text-2xl/[100%]">
@@ -24,7 +24,9 @@
         </svg>
     </div>
 
-    <x-buttons.callback-btn class="mt-auto">
+    <x-buttons.callback-btn
+        class="mt-auto group-hover:bg-basic-brown group-hover:text-light-white"
+    >
         {{ __('pages/doctors.vacancy-card.btn') }}
     </x-buttons.callback-btn>
 </div>

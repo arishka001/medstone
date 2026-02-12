@@ -1,13 +1,13 @@
 <div
     @class([
-        'flex flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5',
+        'group flex flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 transition-all duration-300 hover:shadow-card',
         'hidden sm:flex' => $loop->index > 1,
     ])
 >
     <img
         src="{{ vite::image('blog/' . $item['img']) }}"
         alt=""
-        class="h-57.5 w-full rounded-2xl object-cover object-top xl:size-68.75 2xl:size-85"
+        class="h-57.5 w-full rounded-2xl object-cover object-top xl:h-68.75 2xl:h-85"
     />
 
     <h3 class="text-xl/[100%] sm:w-4/5 2xl:w-full">
@@ -18,7 +18,9 @@
         {!! $item['descr'] !!}
     </p>
 
-    <x-buttons.callback-btn>
+    <x-buttons.callback-btn
+        class="group-hover:bg-basic-brown group-hover:text-light-white"
+    >
         {{ __('pages/blog.btn-details') }}
     </x-buttons.callback-btn>
 </div>

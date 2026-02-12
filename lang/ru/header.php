@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'menu' => 'Меню'
+    'menu' => 'Меню',
+    'callback-btn' => 'Оставить заявку'
 ];

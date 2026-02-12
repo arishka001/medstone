@@ -17,7 +17,7 @@
     </div>
 
     <p
-        class="faq-answer hidden text-base/[100%] sm:w-4/5 sm:text-xl/[100%] sm:font-light"
+        class="faq-answer hidden text-base/[120%] sm:w-4/5 sm:text-xl/[120%] sm:font-light"
     >
         {{ $item['answer'] }}
     </p>

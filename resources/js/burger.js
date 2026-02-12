@@ -1,4 +1,6 @@
+import { helpers } from './helpers.js';
 export function burger() {
+    const header = document.querySelector('.header');
     const burger = document.querySelector('.burger');
     const burgerToggle = document.querySelector('.burger-toggle');
     const burgerText = burgerToggle.querySelector('.burger-text');
@@ -8,10 +10,34 @@ export function burger() {
     const dropdownList = burger.querySelector('.drop-down-list');
     const dropdownArrow = burger.querySelector('.drop-down-arrow');
 
-    burgerToggle.addEventListener('click', () => {
+    function toggleBurger() {
+        header.classList.toggle('rounded-b-3xl');
         burger.classList.toggle('hidden');
         burgerText.classList.toggle('hidden');
         burgerCloser.classList.toggle('hidden');
+
+        helpers.lookScroll.toggle();
+    }
+
+    burgerToggle.addEventListener('click', toggleBurger);
+
+    let currentWindowWith = window.innerWidth;
+    window.addEventListener('resize', function () {
+        if (
+            currentWindowWith !== window.innerWidth &&
+            (helpers.breakpoints.isTablet() || helpers.breakpoints.isDesktop())
+        ) {
+            currentWindowWith = window.innerWidth;
+            if (header.classList.contains('fixed')) {
+                toggleBurger();
+            }
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !burger.classList.contains('hidden')) {
+            toggleBurger();
+        }
     });
 
     dropdownBlock.addEventListener('mouseenter', () => {
@@ -23,7 +49,4 @@ export function burger() {
         dropdownList.classList.add('hidden');
         dropdownArrow.classList.remove('rotate-180');
     });
-
-    // написать функцию, которая автоматом закрывает менюшку, если меняется размер окна на планшете
-    // написать функцию которая блокирует скролл страницы, если меню открыто
 }

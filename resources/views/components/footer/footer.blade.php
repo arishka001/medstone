@@ -7,7 +7,9 @@
         <x-footer.map />
 
         <div class="flex flex-col gap-5 lg:gap-10">
-            <div class="flex flex-col gap-10 lg:flex-row lg:gap-24">
+            <div
+                class="flex flex-col gap-10 lg:flex-row lg:gap-24 xl:gap-30.5 2xl:gap-47.5"
+            >
                 <x-common.logo class="w-40 xl:w-50" />
 
                 <x-footer.navigation.navigation />
