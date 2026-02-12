@@ -29,5 +29,5 @@
         </div>
     </div>
 
-    <x-buttons.callback-btn class="lg:hidden" />
+    <x-buttons.callback-btn class="group lg:hidden" />
 </div>

@@ -7,7 +7,7 @@
 
     <div class="self-end lg:flex lg:justify-between lg:self-auto">
         <x-buttons.callback-btn
-            class="hidden lg:flex lg:w-fit lg:self-end lg:px-10"
+            class="group hidden lg:flex lg:w-fit lg:self-end lg:px-10"
         />
         <img
             src="{{ Vite::image('main/signature.svg') }}"
