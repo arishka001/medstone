@@ -3,9 +3,9 @@
         class="relative container flex flex-col gap-10 py-10 lg:pt-14.5 xl:gap-33.75"
     >
         <img
-            src="{{ Vite::image('main/home-first-section.png') }}"
+            src="{{ Vite::image('main/first-section-bg.png') }}"
             alt=""
-            class="absolute top-64 -left-10 z-0 w-full sm:hidden lg:top-0 lg:left-96 lg:block lg:h-full lg:w-auto xl:left-130"
+            class="absolute hidden lg:top-0 lg:left-150 lg:block lg:h-full lg:w-auto xl:left-180 2xl:left-220"
         />
 
         <div class="relative flex flex-col sm:gap-7.5">

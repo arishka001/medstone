@@ -16,7 +16,7 @@
     <body>
         <x-header.header />
 
-        <main id="main">
+        <main id="main" {{ $attributes->merge() }}>
             {{ $slot }}
         </main>
 

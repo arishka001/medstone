@@ -8,7 +8,7 @@ export function accordion() {
         const answer = item.querySelector('.faq-answer');
         const arrow = item.querySelector('.faq-arrow');
 
-        btn.addEventListener('click', () => {
+        item.addEventListener('click', () => {
             const isOpen = !answer.classList.contains('hidden');
 
             accordions.forEach((acc) => {

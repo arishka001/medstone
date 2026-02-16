@@ -6,16 +6,16 @@ Route::get( '/', function () {
     return view( 'pages.home' );
 } )->name( 'home' );
 
-Route::get( 'stomatology', function () {
-    return view( 'pages/services.stomatology' );
-} )->name( 'stomatology' );
-
 Route::get( 'kids', function () {
-    return view( 'pages/services.kids' );
+    return view( 'pages.services.kids' );
 } )->name( 'kids' );
 
+Route::get( 'stomatology', function () {
+    return view( 'pages.services.stomatology' );
+} )->name( 'stomatology' );
+
 Route::get( 'cosmetology', function () {
-    return view( 'pages/services.cosmetology' );
+    return view( 'pages.services.cosmetology' );
 } )->name( 'cosmetology' );
 
 Route::get( 'dms', function () {

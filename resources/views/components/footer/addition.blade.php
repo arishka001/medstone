@@ -17,7 +17,7 @@
         @endforeach
     </div>
 
-    <div class="flex justify-between">
+    <div class="flex items-end justify-between sm:items-start">
         <a>
             {{ __('footer.dop.website-dev') }}
         </a>

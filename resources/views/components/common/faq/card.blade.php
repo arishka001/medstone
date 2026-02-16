@@ -1,7 +1,7 @@
 <div
     @class([
-        'faq-accordion flex flex-col gap-5 self-start rounded-3xl bg-[#FBFBFB] p-5',
-        'hidden xl:flex' => $loop->index > 4,
+        'group faq-accordion flex cursor-pointer flex-col gap-5 self-start rounded-3xl bg-[#FBFBFB] p-5',
+        ' hidden xl:flex' => $loop->index > 4,
     ])
 >
     <div class="flex items-center justify-between">
@@ -12,7 +12,7 @@
         </h4>
 
         <x-svg.arrow
-            class="faq-btn rotate-90 rounded-xl bg-[#F4F4F4] text-basic-brown"
+            class="faq-btn rotate-90 rounded-xl bg-[#F4F4F4] text-basic-brown group-hover:bg-basic-brown group-hover:text-white"
         />
     </div>
 
