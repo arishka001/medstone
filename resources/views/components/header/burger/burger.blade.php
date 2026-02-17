@@ -4,7 +4,7 @@
     <div
         class="container flex h-full flex-col justify-between gap-2.5 py-8.75 sm:gap-5 sm:py-10 xl:h-21.25 xl:flex-row xl:items-center xl:py-0"
     >
-        <div class="flex">
+        <div class="flex xl:items-center xl:self-stretch">
             <x-header.navigation.navigation />
             <x-common.social-media
                 class="hidden lg:flex lg:flex-col xl:hidden"

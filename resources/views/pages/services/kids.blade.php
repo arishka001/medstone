@@ -1,3 +1,5 @@
 <x-layouts.app>
-    <h1>hello kids</h1>
+    <x-common.services.main-section.main-section page="kids"/>
+
+
 </x-layouts.app>

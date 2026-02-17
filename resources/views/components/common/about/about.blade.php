@@ -21,10 +21,10 @@
                     </p>
                 </div>
 
-                <x-main.about.card-doctor />
+                <x-common.about.card-doctor />
             </div>
 
-            <x-main.about.about-doctor />
+            <x-common.about.about-doctor />
         </div>
     </div>
 </section>

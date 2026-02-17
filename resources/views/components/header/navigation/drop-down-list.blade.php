@@ -1,4 +1,6 @@
-<li class="drop-down-block relative hidden cursor-pointer text-base xl:block">
+<li
+    class="drop-down-block relative hidden cursor-pointer text-base xl:block xl:self-center"
+>
     <x-header.navigation.drop-down-btn />
 
     <ul

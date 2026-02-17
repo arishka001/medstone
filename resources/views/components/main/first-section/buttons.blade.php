@@ -1,4 +1,8 @@
-<div class="flex flex-col gap-2.5 text-base sm:flex-row">
+<div {{
+        $attributes->merge([
+            'class' => 'flex flex-col gap-2.5 text-base sm:flex-row',
+        ])
+    }} >
     <x-buttons.callback-btn-dark
         class="group sm:h-15 sm:w-fit sm:rounded-[40px] sm:px-5"
     >

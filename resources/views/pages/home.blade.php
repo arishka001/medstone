@@ -1,11 +1,11 @@
 <x-layouts.app id="home">
     <x-main.first-section.first-section />
 
-    <x-main.about.about />
+    <x-common.about.about />
 
-    <x-main.gallery.gallery />
+    <x-common.gallery.gallery />
 
-    <x-main.advantages.advantages />
+    <x-common.advantages.advantages />
 
     <x-common.section-doctors />
 

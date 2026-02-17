@@ -1,3 +1,5 @@
 <x-layouts.app>
-    <h2>hello stomatology</h2>
+    <x-common.services.main-section.main-section page="stomatology"/>
+
+
 </x-layouts.app>

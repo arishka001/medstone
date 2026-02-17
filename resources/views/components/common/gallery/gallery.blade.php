@@ -10,10 +10,10 @@
     <div class="swiper relative w-full overflow-visible">
         <div class="swiper-wrapper">
             @foreach (__('pages/home.section-gallery.images') as $key => $item)
-                <x-main.gallery.card :item="$item" :key="$key" />
+                <x-common.gallery.card :item="$item" :key="$key" />
             @endforeach
         </div>
 
-        <x-main.gallery.scroll-btns />
+        <x-common.gallery.scroll-btns />
     </div>
 </section>

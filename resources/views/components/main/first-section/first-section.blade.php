@@ -1,6 +1,6 @@
 <section class="overflow-hidden bg-light-white">
     <div
-        class="relative container flex flex-col gap-10 py-10 lg:pt-14.5 xl:gap-33.75"
+        class="relative container flex flex-col gap-10 py-10 lg:pt-15 xl:gap-33.75"
     >
         <img
             src="{{ Vite::image('main/first-section-bg.png') }}"

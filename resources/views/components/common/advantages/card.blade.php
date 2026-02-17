@@ -6,7 +6,7 @@
             class="flex size-10 items-center justify-center rounded-xl bg-white"
         >
             <img
-                src="{{ Vite::image('main/advantages/' . $item['svg']) }}"
+                src="{{ Vite::image('components/advantages/' . $item['svg']) }}"
                 alt=""
                 class=""
             />

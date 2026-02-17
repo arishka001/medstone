@@ -8,7 +8,7 @@
 
         <ul class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-4">
             @foreach (__('pages/home.section-advantages.list') as $key => $item)
-                <x-main.advantages.card :item="$item" />
+                <x-common.advantages.card :item="$item" />
             @endforeach
         </ul>
     </div>

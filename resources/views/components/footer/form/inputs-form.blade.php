@@ -21,7 +21,7 @@
         type="submit"
         data-form-name="{{ __('footer.form.btn') }}"
         data-question="true"
-        class="flex h-15 w-full cursor-pointer items-center justify-center rounded-3xl bg-white leading-none text-basic-brown transition-all duration-200 hover:opacity-70"
+        class="flex h-15 w-full cursor-pointer items-center justify-center rounded-3xl bg-white leading-none text-basic-brown transition-all duration-200 hover:opacity-80"
         tabindex="0"
     >
         {{ __('footer.form.btn') }}

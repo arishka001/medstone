@@ -1,3 +1,5 @@
 <x-layouts.app>
-    <h1>hello cosmetoogy</h1>
+    <x-common.services.main-section.main-section page="cosmetology"/>
+
+
 </x-layouts.app>
