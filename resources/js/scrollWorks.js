@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 export function scrollWorks() {
     const works = document.querySelector('#works');
+    if (!works) return;
+
     const swiper = works.querySelector('.swiper');
     const prev = works.querySelector('.swiper-prev');
     const next = works.querySelector('.swiper-next');

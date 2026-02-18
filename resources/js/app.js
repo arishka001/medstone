@@ -7,6 +7,7 @@ import { scrollToTop } from './components/scroll-to-top.js';
 import { scrollMap } from './map.js';
 import { scrollGallery } from './scrollGallery.js';
 import { scrollReviews } from './scrollReviews.js';
+import { scrollServicesImages } from './scrollServicesGallery.js';
 import { scrollWorks } from './scrollWorks.js';
 
 burger();
@@ -16,3 +17,4 @@ scrollWorks();
 scrollGallery();
 scrollToTop();
 scrollMap();
+scrollServicesImages();

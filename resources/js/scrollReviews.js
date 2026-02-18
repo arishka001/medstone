@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 export function scrollReviews() {
     const review = document.querySelector('#review');
+    if (!review) return;
+
     const swiper = review.querySelector('.swiper');
     const prev = review.querySelector('.swiper-prev');
     const next = review.querySelector('.swiper-next');

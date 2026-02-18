@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 export function scrollGallery() {
     const gallery = document.querySelector('#gallery');
+    if (!gallery) return;
+
     const swiper = gallery.querySelector('.swiper');
     const prev = gallery.querySelector('.swiper-prev');
     const next = gallery.querySelector('.swiper-next');

@@ -101,6 +101,7 @@
 
     --color-basic-brown: #66554b;
     --color-light-brown: #b39b8c;
+    --color-extra-light-brown: #BFA796;
     --color-dark-brown: #3a1f20;
     --color-light-white: #fcf8f9;
     --color-basic-gray: #e2e2e2;
@@ -139,6 +140,7 @@
 
     body {
         font-family: SFProDisplay, ui-sans-serif, system-ui, sans-serif;
+        font-weight: 400;
         background-color: var(--color-white);
         color: var(--color-basic-brown);
     }

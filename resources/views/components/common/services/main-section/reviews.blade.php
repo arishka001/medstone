@@ -2,7 +2,7 @@
     $attributes -> merge(['class' => 'flex gap-2.5 w-full'])
 }} >
     @foreach(__('common/reviews.reviews-for-services') as $key => $item)
-        <li class="w-full flex flex-col sm:flex-row lg:w-fit p-2.5 gap-2.5 rounded-2xl  bg-white">
+        <li class="w-full flex flex-col sm:flex-row sm:w-fit p-2.5 gap-2.5 rounded-2xl  bg-white">
 
                 <div class="flex flex-col gap-1.25">
                    <div class="flex items-center gap-1.25">
