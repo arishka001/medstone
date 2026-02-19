@@ -5,7 +5,7 @@
     "tabWidth": 4,
     "htmlWhitespaceSensitivity": "css",
     "plugins": [
-        "@prettier/plugin-php",
+
         "prettier-plugin-blade",
         "prettier-plugin-organize-imports",
         "prettier-plugin-tailwindcss"
@@ -17,12 +17,7 @@
     ],
     "tailwindStylesheet": "resources/css/app.css",
     "overrides": [
-        {
-            "files": "*.php",
-            "options": {
-                "parser": "php"
-            }
-        },
+
         {
             "files": "*.yml",
             "options": {

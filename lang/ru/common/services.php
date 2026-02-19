@@ -9,4 +9,32 @@ return [
             'part2' => ' путь к здоровой улыбке прямо сейчас!',
         ],
     ],
+
+    'section-indicators' => [
+        '1' => [
+            'text' => 'Лет работаем на рынке<br>стоматологических услуг',
+            'count' => '10',
+            'img' => 'bg-indicators-1.png',
+            ],
+        '2' => [
+            'text' => 'Врачей<br>в штате клиники',
+            'count' => '27',
+            'img' => 'bg-indicators-2.png',
+            ],
+        '3' => [
+            'text' => 'Пациентов ежедневно<br>делаем счастливыми',
+            'count' => '56',
+            'img' => 'bg-indicators-3.png',
+            ],
+        '4' =>[
+            'top-text' => 'Ежедневно',
+            'text' => 'С утра до вечера<br>в&nbsp;выходные и&nbsp;праздники',
+            'count' => '10-21',
+            'immgs' => [
+                'bg-indicators-3.1.png',
+                'bg-indicators-3.2.png',
+                'bg-indicators-3.3.png',
+            ],
+        ],
+    ],
 ];
