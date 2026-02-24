@@ -1,14 +1,12 @@
 <div class="flex flex-col gap-5 lg:flex-row lg:justify-between">
-    <div class="flex flex-col gap-2.5 sm:flex-row sm:gap-5 sm:items-center">
+    <div class="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-5">
         <img
-            src="{{ vite::image('doctors/toldieva.png') }}"
+            src="{{ Vite::image('doctors/list-doctors/toldieva.png') }}"
             alt=""
-            class="rounded-full object-cover object-top self-center size-70 sm:size-30"
+            class="size-70 self-center rounded-full object-cover object-top sm:size-30"
         />
 
-        <div
-            class="flex flex-col"
-        >
+        <div class="flex flex-col">
             <p class="text-xl/[120%]">
                 {{ __('pages/doctors.doctors-list.main-doctor.surname') }}
 
@@ -22,5 +20,5 @@
         </div>
     </div>
 
-    <x-buttons.callback-btn class="lg:w-fit lg:self-end"/>
+    <x-buttons.callback-btn class="lg:w-fit lg:self-end" />
 </div>

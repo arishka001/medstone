@@ -1,6 +1,7 @@
 <a
+    data-direction="{{ $item['direction'] }}"
     @class([
-        'group flex cursor-pointer flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 transition-all duration-300 hover:shadow-card sm:gap-8.75 xl:gap-5 xl:p-5',
+        'doctor-card group flex cursor-pointer flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 transition-all duration-300 hover:shadow-card sm:gap-8.75 xl:gap-5 xl:p-5',
         'hidden lg:flex' => $loop->index > 3,
     ])
 >
@@ -9,7 +10,7 @@
             class="relative flex h-57.5 w-full overflow-hidden rounded-3xl xl:h-66.25 2xl:h-83"
         >
             <img
-                src="{{ vite::image('doctors/' . $item['img']) }}"
+                src="{{ Vite::image('doctors/list-doctors/' . $item['img']) }}"
                 alt=""
                 class="h-full w-full object-cover object-top"
             />

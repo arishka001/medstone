@@ -1,35 +1,46 @@
 @php
-    $parentUrl = url(str_replace('.', '/', $page));
-    $segmentUrl = $parentUrl . '/' . $item['slug'];
+    $segmentUrl = route($page . '.subservice', ['subservice' => $item['slug']]);
 @endphp
 
-<li class="w-full flex lg:justify-between lg:p-7.5 lg:gap-11.25 xl:gap-13 p-5 2xl:gap-50 rounded-3xl transition-all duration-200 bg-[#FBFBFB] group hover:shadow-custom">
-  <div class="flex flex-col gap-5 w-full lg:flex-row lg:gap-10">
-      <div class="flex justify-between items-center">
-          <div class="flex flex-col gap-0.75 lg:min-w-75">
-              <a href="{{ $segmentUrl }}">
-                  <h3 class="text-xl/[100%] sm:text-2xl/[100%]">
-                      {{  $item['name'] }}
-                  </h3>
-              </a>
-              <p class="text-extra-light-brown text-nowrap text-sm/[100%] sm:text-base/[100%]">
-                  {{  $item['price'] }}
-              </p>
-          </div>
+<li
+    class="group flex w-full rounded-3xl bg-[#FBFBFB] p-5 transition-all duration-200 hover:shadow-custom lg:justify-between lg:gap-11.25 lg:p-7.5 xl:gap-13 2xl:gap-50"
+>
+    <div class="flex w-full flex-col gap-5 lg:flex-row lg:gap-10">
+        <div class="flex items-center justify-between">
+            <div class="flex flex-col gap-0.75 lg:min-w-75">
+                <a href="{{ $segmentUrl }}">
+                    <h3 class="text-xl/[100%] sm:text-2xl/[100%]">
+                        <span>{!! $item['title']['part1'] !!}</span>
+                        <span>{!! $item['title']['part2'] !!}</span>
+                    </h3>
+                </a>
+                <p
+                    class="text-sm/[100%] text-nowrap text-extra-light-brown sm:text-base/[100%]"
+                >
+                    {{ $item['price'] }}
+                </p>
+            </div>
 
-          <x-svg.arrow class="lg:hidden group-hover:text-light-white group-hover:bg-basic-brown"/>
-      </div>
+            <x-svg.arrow
+                class="group-hover:bg-basic-brown group-hover:text-light-white lg:hidden"
+            />
+        </div>
 
-      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-1.25 sm:w-11/12 lg:w-full">
+        <div
+            class="flex flex-col gap-1.25 sm:w-11/12 sm:flex-row sm:flex-wrap lg:w-full"
+        >
+            @foreach ($item['sublist'] as $segment)
+                <a
+                    href="{{ $segmentUrl . '#' . $segment['main']['anchor'] }}"
+                    class="inline-flex h-fit items-center justify-center self-start rounded-xl bg-[#F6F6F6] px-3 py-1.5 text-base/[90%] text-extra-light-brown transition-colors duration-200 hover:bg-[#EDEDED]"
+                >
+                    <span>{!! $segment['main']['name'] !!}</span>
+                </a>
+            @endforeach
+        </div>
+    </div>
 
-          @foreach($item['sublist'] as $segment)
-              <a href="{{ $segmentUrl . '#' . $segment['anchor'] }}" class="self-start inline-flex h-fit bg-[#F6F6F6] text-extra-light-brown text-base/[90%]  items-center transition-colors duration-200 hover:bg-[#EDEDED] justify-center py-1.5 px-3 rounded-xl">
-                  <span> {!! $segment['name'] !!}</span>
-              </a>
-          @endforeach
-      </div>
-  </div>
-
-    <x-svg.arrow class="hidden lg:flex lg:self-center group-hover:text-light-white group-hover:bg-basic-brown"/>
-
+    <x-svg.arrow
+        class="hidden group-hover:bg-basic-brown group-hover:text-light-white lg:flex lg:self-center"
+    />
 </li>

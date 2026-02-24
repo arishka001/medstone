@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'breadcrumb' => 'Блог',
     'btn-more-blogs' => 'Показать больше статей',
     'btn-details' => 'Подробнее',
     'mini-text' => 'Блог',

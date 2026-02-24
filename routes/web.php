@@ -6,13 +6,17 @@ Route::get( '/', function () {
     return view( 'pages.home' );
 } )->name( 'home' );
 
-Route::get( 'kids', function () {
-    return view( 'pages.services.kids' );
-} )->name( 'kids' );
+$services = ['stomatology', 'cosmetology', 'kids'];
 
-Route::get( 'stomatology', function () {
-    return view( 'pages.services.stomatology' );
-} )->name( 'stomatology' );
+foreach ($services as $service) {
+    Route::get($service, fn() => view('pages.services.' . $service, compact('service')))
+         ->name($service);
+
+    Route::get($service . '/{subservice}', function ($subservice) use ($service) {
+        return view('pages.subservice', compact('service', 'subservice'));
+    })->name($service . '.subservice');
+}
+
 
 Route::get( 'cosmetology', function () {
     return view( 'pages.services.cosmetology' );
@@ -31,7 +35,7 @@ Route::get( 'prices', function () {
 } )->name( 'prices' );
 
 Route::get( 'doctors', function () {
-    return view( 'pages/doctors.index' );
+    return view( 'pages.doctors' );
 } )->name( 'doctors' );
 
 Route::get( 'contacts', function () {
@@ -53,6 +57,8 @@ Route::get( 'reviews', function () {
 Route::get( 'vacancies', function () {
     return view( 'pages.vacancies' );
 } )->name( 'vacancies' );
+
+Route::view('/{service}/{subservice}', 'pages.segments.subservice');
 
 //Route::get('second-page',[\App\Http\Controllers\SecondController::class, 'second']);
 

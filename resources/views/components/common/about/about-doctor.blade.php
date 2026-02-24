@@ -3,7 +3,7 @@
         class="flex flex-col gap-2.5 lg:relative lg:h-full lg:w-75 lg:gap-0 xl:w-78.75 2xl:w-95"
     >
         <img
-            src="{{ vite::image('doctors/toldieva.png') }}"
+            src="{{ vite::image('doctors/list-doctors/toldieva.png') }}"
             alt=""
             class="h-80 w-auto rounded-3xl object-cover object-top sm:h-125 lg:absolute lg:top-0 lg:h-full lg:w-full"
         />

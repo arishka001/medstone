@@ -10,6 +10,23 @@ return [
         ],
     ],
 
+    'section-segments' => [
+        'segments-details-price' => [
+            'mini-text' => 'Цены',
+
+            'table' => [
+                'general-prices' =>'Общие цены',
+                'thead' => [
+                    'procedure' => 'Процедура',
+                    'and' => ' и ',
+                    'price' => 'Стоимость'
+
+                ],
+
+            ]
+        ],
+    ],
+
     'section-indicators' => [
         '1' => [
             'text' => 'Лет работаем на рынке<br>стоматологических услуг',

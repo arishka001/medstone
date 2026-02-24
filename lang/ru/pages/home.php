@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'breadcrumb' => 'Главная',
+
     'first-section' => [
         'title' => [
             'part1' => 'Авторская',

@@ -3,5 +3,7 @@
         <x-doctors.card :item="$item" :loop="$loop" />
     @endforeach
 
-    <x-doctors.vacancy-card />
+    @if (! request()->routeIs('doctors'))
+        <x-doctors.vacancy-card />
+    @endif
 </div>

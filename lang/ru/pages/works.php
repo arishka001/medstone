@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'breadcrumb' => 'Примеры работ',
     'btn-more-works' => 'Показать больше работ',
     'mini-text' => 'Портфолио',
     'title'=> [

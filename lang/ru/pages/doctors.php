@@ -1,15 +1,34 @@
 <?php
 
 return [
+    'breadcrumb' => 'Врачи',
     'mini-text' => 'Врачи',
+    'btn-more-doctors' =>'Показать всех врачей',
+    'title-page-doctors' => 'Наши врачи',
+
     'title' => [
         'part1' => 'Команда опытных',
         'part2' => ' стоматологов и&nbsp;косметологов'
     ],
 
-    'btn-more-doctors' =>'Показать всех врачей',
+    'all-doctors' => 'Все врачи',
 
-    'doctors-list' =>[
+    'doctors-categories' => [
+        'kids'=> [
+            'name' => 'Детская стоматология',
+            'img' => 'bg-kids.png',
+        ],
+        'stomatology'=> [
+            'name' => 'Стоматология',
+            'img' => 'bg-stomatology.png',
+        ],
+        'cosmetology'=> [
+            'name' => 'Косметология',
+            'img' => 'bg-cosmetology.png',
+        ],
+    ],
+
+    'doctors-list' => [
         'main-doctor' =>[
             'surname' => 'Толдиева',
             'name' => 'Илиза Тембулатовна',
@@ -24,7 +43,7 @@ return [
             'name' => 'Инал Мухамедович',
             'position'=> 'Стоматолог терапевт-ортопед',
             'experience'=> '9 лет',
-            'direction' => 'kids',
+            'direction' => 'stomatology',
             'img' => 'bratov.png'
         ],
         [
@@ -32,7 +51,7 @@ return [
             'name' => 'Заира Иссаевна',
             'position'=> 'Стоматолог-ортодонт',
             'experience'=> '8 лет',
-            'direction' => 'kids',
+            'direction' => 'cosmetology',
             'img' => 'dodova.png'
         ],
         [
@@ -48,7 +67,7 @@ return [
             'name' => 'Инал Мухамедович',
             'position'=> 'Стоматолог терапевт-ортопед',
             'experience'=> '9 лет',
-            'direction' => 'kids',
+            'direction' => 'cosmetology',
             'img' => 'bratov.png'
         ],
         [
@@ -56,7 +75,7 @@ return [
             'name' => 'Заира Иссаевна',
             'position'=> 'Стоматолог-ортодонт',
             'experience'=> '8 лет',
-            'direction' => 'kids',
+            'direction' => 'stomatology',
             'img' => 'dodova.png'
         ],
         [
@@ -64,7 +83,7 @@ return [
             'name' => 'Дмитрий Сергеевич',
             'position'=> 'Стоматолог хирург-ортопед',
             'experience'=> '8 лет',
-            'direction' => 'kids',
+            'direction' => 'cosmetology',
             'img' => 'kolesnikov.png',
         ],
 

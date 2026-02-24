@@ -1,38 +1,61 @@
+@props(['page' => null])
+
 @php
-    $segments = explode('.', $page);
+    $page = $page ?? request()->path(); // 'doctors' или 'stomatology/implantation'
+    $segments = explode('.', str_replace('/', '.', $page));
     $path = '';
+    $subservice = request()->route('subservice');
+    $service =
+        request()
+            ->route()
+            ->parameter('service') ?? explode('.', str_replace('/', '.', $page))[0];
 @endphp
 
-<div class="flex items-center gap-1 w-fit text-base/[100%]">
-    <a href="{{ route('home') }}">
-        Главная
-    </a>
+<div class="flex max-w-full min-w-0 items-center gap-1 text-base/[100%]">
+    <a href="{{ route('home') }}">Главная</a>
 
-    @foreach($segments as $index => $segment)
-
+    @foreach ($segments as $index => $segment)
         @php
             $path .= ($index === 0 ? '' : '.') . $segment;
-            $title = __('pages/' . $path . '.main-section.title.part1');
+            $title = __('pages/' . $path . '.breadcrumb');
         @endphp
 
-        <svg class="text-light-gray size-5" viewBox="0 0 20 20" fill="none">
-            <path d="M7.5 15L12.5 10L7.5 5"
-                  stroke="currentcolor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"/>
-        </svg>
+        <x-svg.arrow-breadcrumb />
 
-        @if($index !== count($segments) - 1)
-            <a href="{{ url(str_replace('.', '/', $path)) }}"
-               class="text-light-gray">
+        @if ($index !== count($segments) - 1)
+            <a
+                href="{{ url(str_replace('.', '/', $path)) }}"
+                class="text-nowrap text-light-gray"
+            >
                 {{ $title }}
             </a>
         @else
-            <span class="text-light-gray">
-                {{ $title }}
-            </span>
+            @if ($subservice)
+                <a
+                    href="{{ route($service) }}"
+                    class="text-nowrap text-light-gray"
+                >
+                    {{ $title }}
+                </a>
+            @else
+                <span class="min-w-0 truncate text-light-gray">
+                    {{ $title }}
+                </span>
+            @endif
         @endif
-
     @endforeach
 
+    @if ($subservice)
+        @php
+            $allSegments = __('pages/' . $service . '.services-segments.segments-list');
+            $currentSegment = collect($allSegments)->first(fn ($item) => $item['slug'] === $subservice);
+            $subserviceTitle = $currentSegment['title']['part1'] . ' ' . $currentSegment['title']['part2'];
+        @endphp
+
+        <x-svg.arrow-breadcrumb />
+
+        <span class="min-w-0 truncate text-light-gray">
+            {{ $subserviceTitle }}
+        </span>
+    @endif
 </div>
