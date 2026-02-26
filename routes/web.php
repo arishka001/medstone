@@ -17,6 +17,9 @@ foreach ($services as $service) {
     })->name($service . '.subservice');
 }
 
+Route::get('doctors/{doctor}', function ($doctor) {
+    return view('pages.doctor-page', compact('doctor'));
+})->name('doctor');
 
 Route::get( 'cosmetology', function () {
     return view( 'pages.services.cosmetology' );

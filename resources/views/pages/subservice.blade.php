@@ -10,7 +10,7 @@
         :title1="$segment['title']['part1']"
         :title2="$segment['title']['part2']"
         :descr="$segment['descr']"
-        :segment-img="$segment['img']"
+        :segment-img="'pages/subservices/' . $segment['img']"
     />
 
     <x-common.subservices.prices-table

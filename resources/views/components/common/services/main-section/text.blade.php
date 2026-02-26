@@ -13,12 +13,15 @@
 
 <div class="flex flex-col gap-5 sm:gap-3 lg:gap-5 xl:gap-7.5">
     <h1
-        class="text-[42px]/[80%] font-normal sm:text-5xl/[80%] lg:text-6xl/[80%] xl:text-7xl/[80%]"
+        class="text-[42px]/[90%] font-normal sm:text-5xl/[90%] lg:text-6xl/[90%] xl:text-7xl/[90%]"
     >
-        <span class="font-[PlayfairDisplay] italic">
-            {!! $titlePart1 !!}
-        </span>
-        <br />
+        @if ($titlePart1)
+            <span class="font-[PlayfairDisplay] italic">
+                {!! $titlePart1 !!}
+            </span>
+            <br />
+        @endif
+
         {!! $titlePart2 !!}
     </h1>
 

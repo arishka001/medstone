@@ -7,6 +7,7 @@ import { changePricesTabs } from './changePricesTabs.js';
 import { scrollToTop } from './components/scroll-to-top.js';
 import { initDoctorsFilter } from './filterDoctors.js';
 import { scrollMap } from './map.js';
+import { scrollCertificates } from './scrollCertificates.js';
 import { scrollGallery } from './scrollGallery.js';
 import { scrollReviews } from './scrollReviews.js';
 import { scrollServicesImages } from './scrollServicesGallery.js';
@@ -20,7 +21,8 @@ scrollGallery();
 scrollToTop();
 scrollMap();
 scrollServicesImages();
-initDoctorsFilter();
+scrollCertificates();
 document.addEventListener('DOMContentLoaded', () => {
     changePricesTabs();
+    initDoctorsFilter();
 });

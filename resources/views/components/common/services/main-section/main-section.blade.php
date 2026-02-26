@@ -4,6 +4,7 @@
     'title2' => null,
     'descr' => null,
     'segmentImg' => null,
+    'benefits' => null,
 ])
 
 <section class="overflow-hidden bg-light-white">
@@ -17,7 +18,10 @@
 
             <div class="flex flex-col gap-5 xl:gap-7.5">
                 <div class="flex flex-col gap-5">
-                    <x-common.services.main-section.procedures :page="$page" />
+                    <x-common.services.main-section.procedures
+                        :page="$page"
+                        :benefits="$benefits"
+                    />
 
                     <x-common.services.main-section.text
                         :page="$page"
@@ -42,7 +46,7 @@
         <x-common.services.main-section.img
             :page="$page"
             :segment-img="$segmentImg"
-            class="hidden lg:relative lg:z-20 lg:block lg:size-117.5 lg:self-start lg:rounded-[140px] lg:object-cover lg:pt-6.25 xl:size-155 xl:rounded-[170px] 2xl:size-167.5 2xl:rounded-[200px]"
+            class="hidden shrink-0 lg:relative lg:z-20 lg:block lg:size-117.5 lg:self-start lg:rounded-[140px] lg:object-cover lg:pt-6.25 xl:size-155 xl:rounded-[170px] 2xl:size-167.5 2xl:rounded-[200px]"
         />
 
         <x-common.services.main-section.bg-circles-kids :page="$page" />

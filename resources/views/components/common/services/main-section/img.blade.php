@@ -4,9 +4,7 @@
 ])
 
 @php
-    $image = $segmentImg
-        ? __('pages/subservices/' . $segmentImg)
-        : 'pages/' . $page . '/main-section.png';
+    $image = $segmentImg ?? 'pages/' . $page . '/main-section.png';
 @endphp
 
 <img

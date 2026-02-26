@@ -1,8 +1,9 @@
 <a
+    href="{{ route('doctor', $item['slug']) }}"
     data-direction="{{ $item['direction'] }}"
     @class([
         'doctor-card group flex cursor-pointer flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 transition-all duration-300 hover:shadow-card sm:gap-8.75 xl:gap-5 xl:p-5',
-        'hidden lg:flex' => $loop->index > 3,
+        'hidden lg:flex' => $loop->index > 3 && ! request()->routeIs('doctors'),
     ])
 >
     <div class="flex flex-col gap-5">

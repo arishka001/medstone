@@ -1,3 +1,12 @@
+@props([
+    'page',
+    'benefits' => null,
+])
+
+@php
+    $listBenefits = $benefits ?? __('pages/' . $page . '.main-section.benefits');
+@endphp
+
 <ul
     {{
         $attributes->merge([
@@ -5,7 +14,7 @@
         ])
     }}
 >
-    @foreach (__('pages/' . $page . '.main-section.benefits') as $key => $item)
+    @foreach ($listBenefits as $key => $item)
         <li
             class="rounded-3xl border border-b-basic-gray px-3.5 py-1.5 text-base text-nowrap"
         >

@@ -5,6 +5,7 @@
     $segments = explode('.', str_replace('/', '.', $page));
     $path = '';
     $subservice = request()->route('subservice');
+    $doctor = request()->route('doctor');
     $service =
         request()
             ->route()
@@ -30,7 +31,7 @@
                 {{ $title }}
             </a>
         @else
-            @if ($subservice)
+            @if ($subservice || $doctor)
                 <a
                     href="{{ route($service) }}"
                     class="text-nowrap text-light-gray"
@@ -56,6 +57,19 @@
 
         <span class="min-w-0 truncate text-light-gray">
             {{ $subserviceTitle }}
+        </span>
+    @endif
+
+    @if ($doctor)
+        @php
+            $allDoctors = __('pages/doctors.doctors-list');
+            $currentDoctor = collect($allDoctors)->first(fn ($d) => $d['slug'] === $doctor);
+            $doctorTitle = $currentDoctor['surname'] . ' ' . $currentDoctor['name'];
+        @endphp
+
+        <x-svg.arrow-breadcrumb />
+        <span class="min-w-0 truncate text-light-gray">
+            {{ $doctorTitle }}
         </span>
     @endif
 </div>

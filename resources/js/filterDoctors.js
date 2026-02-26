@@ -21,7 +21,13 @@ window.filterDoctors = function (direction) {
         btn.classList.remove('border-basic-brown');
     });
     document.getElementById('filter');
-    document
-        .getElementById('filter-' + direction)
-        ?.classList.add('border-basic-brown');
+
+    const activeCalegory = document.getElementById('filter-' + direction);
+    activeCalegory?.classList.add('border-basic-brown');
+
+    activeCalegory.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
+    });
 };

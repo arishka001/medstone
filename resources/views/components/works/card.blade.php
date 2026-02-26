@@ -4,7 +4,7 @@
             class="flex h-57.5 w-full overflow-hidden rounded-3xl xl:h-68.75 2xl:h-85"
         >
             <img
-                src="{{ vite::image('works/' . $item['img']) }}"
+                src="{{ Vite::image('works/' . $item['img']) }}"
                 alt=""
                 class="h-full w-full rounded-3xl object-cover object-top"
             />
