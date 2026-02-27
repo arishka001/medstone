@@ -14,7 +14,7 @@
     <x-works.list />
 
     <div class="container flex items-center justify-center pt-5 sm:pt-0">
-        <x-buttons.open-more-btn href-name="{{route('home')}}">
+        <x-buttons.open-more-btn href-name="{{route('works')}}">
             {{ __('pages/works.btn-more-works') }}
         </x-buttons.open-more-btn>
     </div>

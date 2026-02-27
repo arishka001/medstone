@@ -7,13 +7,13 @@
                 <h1
                     class="text-[42px]/[80%] font-normal sm:text-5xl/[80%] lg:text-6xl/[80%] xl:text-7xl/[80%] 2xl:text-[82px]/[80%]"
                 >
-                    {{ __('pages/blog.title.part1') }}
+                    {{ __('pages/works.breadcrumb') }}
                 </h1>
             </div>
 
-            <x-blog.blog-categories />
+            <x-works.works-categories />
 
-            <x-blog.list />
+            <x-works.list />
         </div>
     </section>
 </x-layouts.app>

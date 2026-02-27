@@ -8,7 +8,9 @@
     >
         @foreach (__('navigation.part2') as $link => $name)
             @if (in_array($link, ['vacancies', 'blog', 'reviews', 'contacts']))
-                <li class="transition-colors duration-200 hover:text-[#B1B1B1]">
+                <li
+                    class="transition-colors duration-200 hover:text-light-brown"
+                >
                     <a href="{{ route($link) }}">
                         {{ $name }}
                     </a>

@@ -1,5 +1,10 @@
-<div class="swiper-slide">
-    <div @class(['flex flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 xl:p-5'])>
+<div @class([
+    'swiper-slide' => ! request()->routeIs('works'),
+])>
+    <div
+        @class(['work-card flex flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 xl:p-5'])
+        data-direction="{{ $item['direction'] }}"
+    >
         <div
             class="flex h-57.5 w-full overflow-hidden rounded-3xl xl:h-68.75 2xl:h-85"
         >

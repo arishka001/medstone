@@ -8,7 +8,7 @@
 
         <x-doctors.list />
 
-        <x-buttons.open-more-btn class="" href-name="{{route('home')}}">
+        <x-buttons.open-more-btn class="" href-name="{{route('doctors')}}">
             {{ __('pages/doctors.btn-more-doctors') }}
         </x-buttons.open-more-btn>
     </div>

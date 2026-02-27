@@ -53,6 +53,10 @@ Route::get( 'blog', function () {
     return view( 'pages.blog' );
 } )->name( 'blog' );
 
+Route::get( 'works', function () {
+    return view( 'pages.works' );
+} )->name( 'works' );
+
 Route::get( 'reviews', function () {
     return view( 'pages.reviews' );
 } )->name( 'reviews' );
@@ -61,7 +65,7 @@ Route::get( 'vacancies', function () {
     return view( 'pages.vacancies' );
 } )->name( 'vacancies' );
 
-Route::view('/{service}/{subservice}', 'pages.segments.subservice');
+Route::view('/{service}/{subservice}', 'pages.subservice');
 
 //Route::get('second-page',[\App\Http\Controllers\SecondController::class, 'second']);
 

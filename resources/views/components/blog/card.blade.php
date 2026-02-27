@@ -1,11 +1,19 @@
-<div
+@if (! request()->routeIs('blog') && $loop->index >= 4)
+    @php
+        return;
+    @endphp
+@endif
+
+<a
+    {{-- href="{{ route('blog', $item['']) }}" --}}
+    data-direction="{{ $item['direction'] }}"
     @class([
-        'group flex flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 transition-all duration-300 hover:shadow-card',
-        'hidden sm:flex' => $loop->index > 1,
+        'blog-card group flex flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 transition-all duration-300 hover:shadow-card',
+        'hidden sm:flex' => $loop->index > 1 && ! request()->routeIs('blog'),
     ])
 >
     <img
-        src="{{ vite::image('blog/' . $item['img']) }}"
+        src="{{ Vite::image('blog/' . $item['img']) }}"
         alt=""
         class="h-57.5 w-full rounded-2xl object-cover object-top xl:h-68.75 2xl:h-85"
     />
@@ -23,4 +31,4 @@
     >
         {{ __('pages/blog.btn-details') }}
     </x-buttons.callback-btn>
-</div>
+</a>
