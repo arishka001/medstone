@@ -7,6 +7,7 @@
 
     <div class="self-end lg:flex lg:justify-between lg:self-auto">
         <x-buttons.callback-btn
+            onclick="openModal()"
             class="group hidden lg:flex lg:w-fit lg:self-end lg:px-10"
         />
         <img

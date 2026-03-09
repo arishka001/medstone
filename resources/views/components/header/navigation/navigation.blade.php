@@ -5,10 +5,8 @@
         @foreach (__('navigation.part1') as $link => $name)
             <li
                 @class([
-                    'nav-link flex transition-colors duration-200 hover:text-light-brown xl:items-center',
-                    'xl:border-b-3 xl:border-light-brown xl:text-light-brown' => request()->routeIs(
-                        $link,
-                    ),
+                    'nav-link flex transition-colors duration-200 hover:text-light-brown xl:items-center xl:border-b-2 xl:border-transparent',
+                    'xl:border-b-light-brown xl:text-light-brown' => request()->routeIs($link),
                 ])
             >
                 <a href="{{ route($link) }}">{{ $name }}</a>
@@ -27,11 +25,9 @@
             @else
                 <li
                     @class([
-                        'nav-link some flex transition-colors duration-200 hover:text-light-brown xl:items-center',
-                        'xl:border-b-3 xl:border-light-brown xl:text-light-brown' => request()->routeIs(
-                            $link,
-                        ),
-                        'text-light-brown ' => $loop->last,
+                        'nav-link some flex transition-colors duration-200 hover:text-light-brown xl:items-center xl:border-b-2 xl:border-transparent',
+                        'xl:border-b-light-brown xl:text-light-brown' => request()->routeIs($link),
+                        'text-light-brown' => $loop->last,
                     ])
                 >
                     <a href="{{ route($link) }}">{{ $name }}</a>

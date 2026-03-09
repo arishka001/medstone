@@ -35,7 +35,7 @@
                     @endforeach
                 </div>
 
-                <x-buttons.callback-btn>
+                <x-buttons.callback-btn onclick="openModal()">
                     {{ __('pages/home.first-section.btns.consultation') }}
                 </x-buttons.callback-btn>
             </div>

@@ -1,3 +1,7 @@
 <x-layouts.app>
-    <h2>dms hellooo</h2>
+    <x-common.services.main-section.main-section page="dms" />
+
+    <x-dms.stages.stages />
+
+    <x-dms.companies.companies />
 </x-layouts.app>

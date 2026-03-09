@@ -8,7 +8,7 @@
 >
     <div class="flex flex-col gap-5">
         <div
-            class="relative flex h-57.5 w-full overflow-hidden rounded-3xl xl:h-66.25 2xl:h-83"
+            class="relative flex h-70 w-full overflow-hidden rounded-3xl lg:h-57 xl:h-66.25 2xl:h-83"
         >
             <img
                 src="{{ Vite::image('doctors/list-doctors/' . $item['img']) }}"

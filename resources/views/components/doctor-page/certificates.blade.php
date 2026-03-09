@@ -1,15 +1,17 @@
 @props([
+    'kicker',
+    'title',
+    'accent' => '',
     'certificates' => null,
 ])
-
 <section class="flex flex-col gap-5 sm:gap-10 lg:gap-15" id="certificates">
     <div
         class="container flex flex-col gap-10 sm:flex-row sm:justify-between sm:gap-0"
     >
         <x-typography.second-header
-            kicker="{{ __('pages/doctors.section-certifications.mini-text') }}"
-            title="{!!   __('pages/doctors.section-certifications.title.part1') !!}"
-            accent="{!! __('pages/doctors.section-certifications.title.part2') !!}"
+            kicker="{!! $kicker !!}"
+            title="{!! $title !!}"
+            accent="{!! $accent !!}"
         />
 
         <x-buttons.scroll-buttons />

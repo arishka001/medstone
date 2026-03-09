@@ -5,7 +5,7 @@
         <img
             src="{{ Vite::image('components/gallery/' . $item) }}"
             alt=""
-            class="absolute inset-0 z-0 h-full w-full rounded-3xl object-cover"
+            class="pointer-events-none absolute inset-0 z-0 h-full w-full rounded-3xl object-cover"
         />
     </div>
 </div>

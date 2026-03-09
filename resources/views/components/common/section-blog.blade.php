@@ -7,7 +7,7 @@
 
         <x-blog.list />
 
-        <x-buttons.open-more-btn href-name="{{route('home')}}">
+        <x-buttons.open-more-btn href-name="{{route('blog')}}">
             {{ __('pages/blog.btn-more-blogs') }}
         </x-buttons.open-more-btn>
     </div>

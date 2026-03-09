@@ -3,6 +3,7 @@ import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { getContainerOffset } from './utils.js';
 export function scrollReviews() {
     const review = document.querySelector('#review');
     if (!review) return;
@@ -11,22 +12,12 @@ export function scrollReviews() {
     const prev = review.querySelector('.swiper-prev');
     const next = review.querySelector('.swiper-next');
 
-    function getContainerOffset() {
-        const container = review.querySelector('.container');
-        const styles = getComputedStyle(container);
-
-        const paddingLeft = parseFloat(styles.paddingLeft);
-        const left = container.getBoundingClientRect().left;
-
-        return left + paddingLeft;
-    }
-
     new Swiper(swiper, {
         slidesPerView: 1,
         spaceBetween: 10,
         watchOverflow: true,
-        slidesOffsetBefore: getContainerOffset(),
-        slidesOffsetAfter: getContainerOffset(),
+        slidesOffsetBefore: getContainerOffset(review),
+        slidesOffsetAfter: getContainerOffset(review),
         modules: [Navigation],
         navigation: {
             prevEl: prev,
@@ -35,8 +26,10 @@ export function scrollReviews() {
 
         on: {
             resize(swiperInstance) {
-                swiperInstance.params.slidesOffsetBefore = getContainerOffset();
-                swiperInstance.params.slidesOffsetAfter = getContainerOffset();
+                swiperInstance.params.slidesOffsetBefore =
+                    getContainerOffset(review);
+                swiperInstance.params.slidesOffsetAfter =
+                    getContainerOffset(review);
                 swiperInstance.update();
             },
         },

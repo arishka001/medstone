@@ -1,7 +1,14 @@
+import { applyContainerPadding } from './utils.js';
+
 export function changePricesTabs() {
     const tabs = document.querySelectorAll('.price-tab');
 
     if (!tabs.length) return;
+
+    const scroll = document.querySelector('.prices-filter');
+    if (!scroll) return;
+
+    applyContainerPadding(scroll);
 
     const hash = window.location.hash?.replace('#', '');
 
@@ -38,16 +45,15 @@ window.showPrices = function (anchor) {
     document.getElementById(anchor)?.classList.remove('hidden');
 
     document.querySelectorAll('.price-tab').forEach((tab) => {
-        tab.classList.remove(
-            'border-extra-light-brown',
-            'text-extra-light-brown',
-        );
+        tab.classList.remove('border-basic-brown');
+        tab.classList.add('hover:border-light-brown', 'hover:text-light-brown');
     });
 
     const activeTab = document.getElementById('tab-' + anchor);
-    activeTab?.classList.add(
-        'border-extra-light-brown',
-        'text-extra-light-brown',
+    activeTab?.classList.add('border-basic-brown');
+    activeTab.classList.remove(
+        'hover:border-light-brown',
+        'hover:text-light-brown',
     );
 
     activeTab?.scrollIntoView({

@@ -19,7 +19,12 @@
         :more="$item['more-info']"
     />
 
-    <x-doctor-page.certificates :certificates="$item['certificates']" />
+    <x-doctor-page.certificates
+        :kicker="__('pages/doctors.section-certifications.mini-text')"
+        :title=" __('pages/doctors.section-certifications.title.part1')"
+        :accent="__('pages/doctors.section-certifications.title.part2')"
+        :certificates="$item['certificates']"
+    />
 
     <x-common.section-works />
 </x-layouts.app>

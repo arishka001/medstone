@@ -6,7 +6,7 @@
             class="size-70 self-center rounded-full object-cover object-top sm:size-30"
         />
 
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center">
             <p class="text-xl/[120%]">
                 {{ __('pages/doctors.doctors-list.main-doctor.surname') }}
 

@@ -1,7 +1,13 @@
+import { applyContainerPadding } from './utils.js';
+
 export function initDoctorsFilter() {
     const filters = document.querySelectorAll('.doctor-filter');
     if (!filters.length) return;
 
+    const scroll = document.querySelector('#doctors-filter');
+    if (!scroll) return;
+
+    applyContainerPadding(scroll);
     filterDoctors('all');
 }
 
@@ -22,10 +28,10 @@ window.filterDoctors = function (direction) {
     });
     document.getElementById('filter');
 
-    const activeCalegory = document.getElementById('filter-' + direction);
-    activeCalegory?.classList.add('border-basic-brown');
+    const activeCategory = document.getElementById('filter-' + direction);
+    activeCategory?.classList.add('border-basic-brown');
 
-    activeCalegory.scrollIntoView({
+    activeCategory.scrollIntoView({
         behavior: 'smooth',
         block: 'nearest',
         inline: 'center',

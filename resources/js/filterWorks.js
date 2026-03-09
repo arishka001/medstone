@@ -1,6 +1,13 @@
+import { applyContainerPadding } from './utils.js';
+
 export function initWorksFilter() {
     const works = document.querySelectorAll('.work-filter');
     if (!works.length) return;
+
+    const scroll = document.querySelector('#works-filter');
+    if (!scroll) return;
+
+    applyContainerPadding(scroll);
 
     filterWorks('all');
 }

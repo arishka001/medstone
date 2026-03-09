@@ -7,3 +7,4 @@ if ( ! function_exists( 'image' ) ) {
         return Vite::asset( 'resources/images/' . ltrim( $path, '/' ) );
     }
 }
+

@@ -1,7 +1,7 @@
 <div
-    class="group hidden cursor-pointer flex-col items-center gap-15 rounded-3xl bg-[#FBFBFB] p-5 lg:flex"
+    class="group hidden cursor-pointer flex-col items-center justify-between rounded-3xl bg-[#FBFBFB] p-5 lg:flex"
 >
-    <div class="flex flex-col gap-4 p-2.5">
+    <div class="flex flex-col gap-4">
         <h3 class="text-xl/[100%] xl:text-2xl/[100%]">
             {{ __('pages/doctors.vacancy-card.title') }}
         </h3>

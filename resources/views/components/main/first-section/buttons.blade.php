@@ -1,9 +1,12 @@
-<div {{
+<div
+    {{
         $attributes->merge([
             'class' => 'flex flex-col gap-2.5 text-base sm:flex-row',
         ])
-    }} >
+    }}
+>
     <x-buttons.callback-btn-dark
+        onclick="openModal()"
         class="group sm:h-15 sm:w-fit sm:rounded-[40px] sm:px-5"
     >
         {{ __('pages/home.first-section.btns.consultation') }}

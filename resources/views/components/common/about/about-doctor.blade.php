@@ -29,5 +29,5 @@
         </div>
     </div>
 
-    <x-buttons.callback-btn class="group lg:hidden" />
+    <x-buttons.callback-btn class="group lg:hidden" onclick="openModal()" />
 </div>

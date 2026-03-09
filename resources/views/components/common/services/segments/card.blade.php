@@ -32,9 +32,9 @@
             @foreach ($item['sublist'] as $segment)
                 <a
                     href="{{ $segmentUrl . '#' . $segment['main']['anchor'] }}"
-                    class="inline-flex h-fit items-center justify-center self-start rounded-xl bg-[#F6F6F6] px-3 py-1.5 text-base/[90%] text-extra-light-brown transition-colors duration-200 hover:bg-[#EDEDED]"
+                    class="inline-block h-fit w-fit rounded-xl bg-[#F6F6F6] px-3 py-1.5 text-base/[90%] text-extra-light-brown transition-colors duration-200 hover:bg-[#EDEDED]"
                 >
-                    <span>{!! $segment['main']['name'] !!}</span>
+                    {!! $segment['main']['name'] !!}
                 </a>
             @endforeach
         </div>

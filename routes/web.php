@@ -21,6 +21,10 @@ Route::get('doctors/{doctor}', function ($doctor) {
     return view('pages.doctor-page', compact('doctor'));
 })->name('doctor');
 
+Route::get('thanks', function () {
+    return view('pages.thanks');
+})->name('thanks');
+
 Route::get( 'cosmetology', function () {
     return view( 'pages.services.cosmetology' );
 } )->name( 'cosmetology' );
@@ -52,6 +56,10 @@ Route::get( 'promotions', function () {
 Route::get( 'blog', function () {
     return view( 'pages.blog' );
 } )->name( 'blog' );
+
+Route::get('blog/{article}', function ($article) {
+    return view('pages.blog-page', compact('article'));
+})->name('article');
 
 Route::get( 'works', function () {
     return view( 'pages.works' );

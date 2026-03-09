@@ -1,6 +1,6 @@
 <div
     @class([
-        'group faq-accordion flex cursor-pointer flex-col gap-5 self-start rounded-3xl bg-[#FBFBFB] p-5',
+        'group accordion flex cursor-pointer flex-col gap-5 self-start rounded-3xl bg-[#FBFBFB] p-5',
         ' hidden xl:flex' => $loop->index > 4,
     ])
 >
@@ -12,12 +12,12 @@
         </h4>
 
         <x-svg.arrow
-            class="faq-btn rotate-90 rounded-xl bg-[#F4F4F4] text-basic-brown group-hover:bg-basic-brown group-hover:text-white"
+            class="btn-accordion rotate-90 rounded-xl bg-[#F4F4F4] text-basic-brown group-hover:bg-basic-brown group-hover:text-white"
         />
     </div>
 
     <p
-        class="faq-answer hidden text-base/[120%] sm:w-4/5 sm:text-xl/[120%] sm:font-light"
+        class="answer-accordion hidden text-base/[120%] sm:w-4/5 sm:text-xl/[120%] sm:font-light"
     >
         {{ $item['answer'] }}
     </p>

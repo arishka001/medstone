@@ -18,7 +18,7 @@
                 link-class="size-12.5 rounded-xl bg-light-white sm:size-15"
             />
 
-            <x-buttons.callback-btn class="group">
+            <x-buttons.callback-btn class="group" onclick="openModal()">
                 {{ __('header.callback-btn') }}
             </x-buttons.callback-btn>
         </div>

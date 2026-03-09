@@ -28,7 +28,7 @@ export function scrollGallery() {
         loop: true,
         centeredSlides: true,
         grabCursor: true,
-
+        watchOverflow: true,
         //тут скролл пальцем и мышкой
         allowTouchMove: true,
         simulateTouch: true,

@@ -6,6 +6,7 @@
     $path = '';
     $subservice = request()->route('subservice');
     $doctor = request()->route('doctor');
+    $article = request()->route('article');
     $service =
         request()
             ->route()
@@ -31,7 +32,7 @@
                 {{ $title }}
             </a>
         @else
-            @if ($subservice || $doctor)
+            @if ($subservice || $doctor || $article)
                 <a
                     href="{{ route($service) }}"
                     class="text-nowrap text-light-gray"
@@ -39,7 +40,7 @@
                     {{ $title }}
                 </a>
             @else
-                <span class="min-w-0 truncate text-light-gray">
+                <span class="text-light-gray">
                     {{ $title }}
                 </span>
             @endif
@@ -70,6 +71,18 @@
         <x-svg.arrow-breadcrumb />
         <span class="min-w-0 truncate text-light-gray">
             {{ $doctorTitle }}
+        </span>
+    @endif
+
+    @if ($article)
+        @php
+            $allBlogs = __('pages/blog.list-blogs');
+            $currentBlog = collect($allBlogs)->first(fn ($d) => $d['slug'] === $article);
+        @endphp
+
+        <x-svg.arrow-breadcrumb />
+        <span class="min-w-0 truncate text-light-gray">
+            {!! $currentBlog['name'] !!}
         </span>
     @endif
 </div>

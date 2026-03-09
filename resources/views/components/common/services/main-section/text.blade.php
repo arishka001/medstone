@@ -11,7 +11,7 @@
     $resolvedDescr = $descr ?? __('pages/' . $page . '.main-section.descr');
 @endphp
 
-<div class="flex flex-col gap-5 sm:gap-3 lg:gap-5 xl:gap-7.5">
+<div class="flex flex-col gap-5 sm:gap-3 lg:gap-5 xl:gap-7.5 2xl:w-2/3">
     <h1
         class="text-[42px]/[90%] font-normal sm:text-5xl/[90%] lg:text-6xl/[90%] xl:text-7xl/[90%]"
     >
@@ -26,7 +26,7 @@
     </h1>
 
     <p
-        class="text-base/[120%] leading-none sm:w-11/12 sm:text-lg/[100%] lg:w-5/6 xl:w-full xl:text-xl/[100%]"
+        class="text-base/[120%] leading-none sm:w-11/12 sm:text-lg/[100%] lg:w-5/6 xl:text-xl/[100%] 2xl:w-full"
     >
         {!! $resolvedDescr !!}
     </p>

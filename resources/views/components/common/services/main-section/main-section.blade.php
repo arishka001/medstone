@@ -9,7 +9,7 @@
 
 <section class="overflow-hidden bg-light-white">
     <div
-        class="container gap-11.5 py-7.5 sm:py-10 lg:relative lg:flex lg:gap-5 lg:pt-15 xl:items-stretch xl:gap-28 xl:pb-19.25 2xl:gap-80 2xl:pb-21"
+        class="container gap-11.5 py-7.5 sm:py-10 lg:relative lg:flex lg:justify-between lg:pt-15 xl:items-stretch xl:pb-19.25 2xl:pb-21"
     >
         <div
             class="flex flex-col gap-7.5 sm:w-5/6 sm:gap-16 lg:relative lg:z-20 lg:w-full lg:justify-between lg:gap-18.75 xl:gap-0"

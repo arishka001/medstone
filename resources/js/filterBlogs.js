@@ -1,7 +1,13 @@
+import { applyContainerPadding } from './utils.js';
+
 export function initBlogsFilter() {
     const blogs = document.querySelectorAll('.blog-filter');
     if (!blogs.length) return;
 
+    const scroll = document.querySelector('#blogs-filter');
+    if (!scroll) return;
+
+    applyContainerPadding(scroll);
     filterBlogs('all');
 }
 

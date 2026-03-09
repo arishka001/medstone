@@ -13,7 +13,7 @@
         :segment-img="'pages/subservices/' . $segment['img']"
     />
 
-    <x-common.subservices.prices-table
+    <x-common.subservices.prices.section-prices
         :service="$service"
         :segment="$segment"
     />

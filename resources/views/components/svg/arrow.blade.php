@@ -6,7 +6,7 @@
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        class="faq-arrow transition-transform duration-300 ease-in-out"
+        class="arrow-accordion transition-transform duration-300 ease-in-out"
         xmlns="http://www.w3.org/2000/svg"
     >
         <path

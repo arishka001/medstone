@@ -8,6 +8,7 @@
         <title>Главная</title>
         <meta name="description" content="" />
 
+        <meta name="thanks-url" content="{{ route('thanks') }}" />
         <meta name="csrf-token" content="{{ csrf_token() }}" />
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -22,4 +23,7 @@
 
         <x-footer.footer />
     </body>
+
+    <x-common.modals.callback-modal />
+    <x-common.modals.vacancy-modal />
 </html>

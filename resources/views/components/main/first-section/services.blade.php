@@ -2,7 +2,7 @@
     @foreach (__('pages/home.section-services') as $key => $item)
         <a href="{{ route($item['href']) }}">
             <li
-                class="group flex justify-between gap-2.5 rounded-3xl bg-white p-5 transition-all duration-300 hover:shadow-card xl:flex-col xl:gap-0"
+                class="group flex h-full justify-between gap-2.5 rounded-3xl bg-white p-5 transition-all duration-300 hover:shadow-card xl:flex-col xl:gap-0"
             >
                 <div class="flex flex-col gap-5 sm:gap-2.5">
                     <h3 class="text-2xl/[100%]">
@@ -21,5 +21,5 @@
         </a>
     @endforeach
 
-    <x-main.first-section.offers />
+    <x-main.first-section.offers.offers />
 </ul>

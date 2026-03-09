@@ -9,14 +9,31 @@
 
 @font-face {
     font-family: 'SFProDisplay';
-    src:
-
-        url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
-        url('../fonts/SFProDisplay-Regular.woff') format('woff');
-    font-weight: 400;
+    src: url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+    url('../fonts/SFProDisplay-Regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
+    url('../fonts/SFProDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('../fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+    url('../fonts/SFProDisplay-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 @font-face {
     font-family: 'PlayfairDisplay';
@@ -109,6 +126,19 @@
     --color-basic-beige: #ecdfcf;
 
     --my-button-radius: 40px;
+
+    --animate-marquee: marquee 30s linear infinite;
+    --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
 }
 
 /*
@@ -130,6 +160,7 @@
 }
 
 @layer utilities {
+
     .shadow-custom {
         box-shadow: var(--shadow-custom);
     }
@@ -379,4 +410,5 @@
     body {
         @apply text-foreground;
     }
+
 }
