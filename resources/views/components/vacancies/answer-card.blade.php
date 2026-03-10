@@ -51,7 +51,7 @@
     </div>
 
     <x-buttons.callback-btn
-        onclick="openModal('vacancy-modal', '{{ $item['position']}} ')"
+        onclick="openModal('vacancy-modal', { position: '{{ $item['position'] }}'})"
         class="group mt-2.5 sm:w-fit sm:self-start sm:px-16"
     >
         {{ __('pages/vacancies.btn-apply') }}

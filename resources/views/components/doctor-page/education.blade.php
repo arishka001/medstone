@@ -1,6 +1,7 @@
 @props([
     'education' => null,
     'more' => null,
+    'item',
 ])
 
 <section>
@@ -35,7 +36,9 @@
                     @endforeach
                 </div>
 
-                <x-buttons.callback-btn onclick="openModal()">
+                <x-buttons.callback-btn
+                    onclick="openModal('callback-modal',{doctor:' {{ $item['surname'] . ' ' . $item['name'] }}'})"
+                >
                     {{ __('pages/home.first-section.btns.consultation') }}
                 </x-buttons.callback-btn>
             </div>

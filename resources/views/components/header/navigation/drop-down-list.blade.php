@@ -7,7 +7,7 @@
         class="drop-down-list absolute top-6 right-0 hidden flex-col gap-1.25 rounded-xl bg-white p-4 shadow-custom group-hover:flex xl:border-b-2 xl:border-transparent"
     >
         @foreach (__('navigation.part2') as $link => $name)
-            @if (in_array($link, ['vacancies', 'blog', 'reviews', 'contacts']))
+            @if (in_array($link, ['vacancies', 'blog', 'contacts']))
                 <li
                     class="transition-colors duration-200 hover:text-light-brown"
                 >

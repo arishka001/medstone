@@ -26,4 +26,5 @@
 
     <x-common.modals.callback-modal />
     <x-common.modals.vacancy-modal />
+    <x-common.modals.certificate-modals />
 </html>

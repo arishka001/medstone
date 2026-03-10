@@ -10,7 +10,7 @@
     <div
         class="relative z-10 flex h-full w-full flex-col gap-10 bg-light-white p-8.75 sm:h-auto sm:max-w-xl sm:rounded-3xl sm:p-10"
     >
-        <x-common.modals.common.closer id="vacancy-modal" />
+        <x-common.modals.common.closer id="'vacancy-modal'" />
 
         <x-common.modals.common.title-descr
             title1=" {!! __('common/modals.vacancy-modal.title.part1') !!}"
@@ -22,7 +22,7 @@
             class="flex flex-1 flex-col justify-between gap-5 sm:flex-none"
             onsubmit="return false;"
         >
-            <p id="vacancy-position-title" class="text-xl/[90%]"></p>
+            <p id="vacancy-position-title" class="hidden text-xl/[90%]"></p>
 
             <x-common.modals.common.inputs>
                 <textarea

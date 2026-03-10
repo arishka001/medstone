@@ -22,6 +22,11 @@
             @foreach ($certificates as $key => $item)
                 <div class="swiper-slide">
                     <div
+                        onclick="
+                            openCertificate(
+                                '{{ Vite::image('doctors/certificates/' . $item['certificate']) }}',
+                            )
+                        "
                         class="group flex gap-3 rounded-3xl bg-[#FBFBFB] p-7.5 shadow-card shadow-transparent transition-all duration-300 hover:shadow-black/10"
                     >
                         <div class="flex flex-col items-start justify-between">

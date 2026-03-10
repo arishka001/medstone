@@ -9,5 +9,14 @@
                 </div>
             @endforeach
         </div>
+
+        <div class="container flex justify-center">
+            <x-buttons.callback-btn-dark
+                onclick="openModal()"
+                class="group w-full self-center sm:w-fit"
+            >
+                {{ __('pages/home.first-section.btns.consultation') }}
+            </x-buttons.callback-btn-dark>
+        </div>
     </div>
 </section>

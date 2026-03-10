@@ -20,5 +20,8 @@
         </div>
     </div>
 
-    <x-buttons.callback-btn class="lg:w-fit lg:self-end" />
+    <x-buttons.callback-btn
+        onclick="openModal()"
+        class="lg:w-fit lg:self-end"
+    />
 </div>

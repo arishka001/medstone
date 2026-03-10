@@ -1,3 +1,3 @@
 <x-layouts.app>
-    <x-common.section-thanks />
+    <x-common.sections.section-thanks />
 </x-layouts.app>

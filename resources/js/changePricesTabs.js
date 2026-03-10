@@ -17,11 +17,6 @@ export function changePricesTabs() {
         if (tabFromHash) {
             showPrices(hash);
 
-            document.getElementById('price-tabs-section')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            });
-
             setTimeout(() => {
                 tabFromHash.scrollIntoView({
                     behavior: 'smooth',
@@ -34,10 +29,11 @@ export function changePricesTabs() {
         }
     }
 
-    tabs[0].click();
+    const firstAnchor = tabs[0].id.replace('tab-', '');
+    showPrices(firstAnchor, false);
 }
 
-window.showPrices = function (anchor) {
+window.showPrices = function (anchor, scroll = true) {
     document
         .querySelectorAll('.prices-body')
         .forEach((el) => el.classList.add('hidden'));
@@ -56,9 +52,11 @@ window.showPrices = function (anchor) {
         'hover:text-light-brown',
     );
 
-    activeTab?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-    });
+    if (scroll) {
+        activeTab?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center',
+        });
+    }
 };

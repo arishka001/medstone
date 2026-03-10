@@ -7,9 +7,9 @@
 
     <x-common.services.indicators.indicators />
 
-    <x-common.section-doctors />
+    <x-common.sections.section-doctors />
 
-    <x-common.section-works />
+    <x-common.sections.section-works />
 
     <x-common.faq.section-faq />
 

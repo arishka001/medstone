@@ -1,9 +1,3 @@
-@php
-    $segments = __('pages/' . $service . '.services-segments.segments-list');
-    $segment = collect($segments)->first(fn ($item) => $item['slug'] === $subservice);
-    abort_if(! $segment, 404);
-@endphp
-
 <x-layouts.app>
     <x-common.services.main-section.main-section
         :page="$service"
@@ -18,9 +12,9 @@
         :segment="$segment"
     />
 
-    <x-common.section-works />
+    <x-common.sections.section-works />
 
-    <x-common.section-doctors />
+    <x-common.sections.section-doctors />
 
     <x-common.faq.section-faq />
 </x-layouts.app>

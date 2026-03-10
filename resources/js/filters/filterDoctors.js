@@ -1,4 +1,4 @@
-import { applyContainerPadding } from './utils.js';
+import { applyContainerPadding } from '../utils.js';
 
 export function initDoctorsFilter() {
     const filters = document.querySelectorAll('.doctor-filter');

@@ -1,5 +1,5 @@
-<a
-    href="{{ route('doctor', $item['slug']) }}"
+<div
+    onclick="window.location.href = '{{ route('doctor', $item['slug']) }}'"
     data-direction="{{ $item['direction'] }}"
     @class([
         'doctor-card group flex cursor-pointer flex-col gap-5 rounded-3xl bg-[#FBFBFB] p-2.5 transition-all duration-300 hover:shadow-card sm:gap-8.75 xl:gap-5 xl:p-5',
@@ -44,6 +44,7 @@
     </div>
 
     <x-buttons.callback-btn
+        onclick="arguments[0].stopPropagation(); openModal('callback-modal',{doctor:' {{ $item['surname'] . ' ' . $item['name'] }}'})"
         class="mt-auto self-end group-hover:bg-basic-brown group-hover:text-light-white"
     />
-</a>
+</div>

@@ -3,7 +3,7 @@ import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { getContainerOffset } from './utils.js';
+import { getContainerOffset } from '../utils.js';
 export function scrollReviews() {
     const review = document.querySelector('#review');
     if (!review) return;

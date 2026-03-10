@@ -1,30 +1,28 @@
-import { applyContainerPadding } from './utils.js';
+import { applyContainerPadding } from '../utils.js';
 
-export function initWorksFilter() {
-    const works = document.querySelectorAll('.work-filter');
-    if (!works.length) return;
+export function initBlogsFilter() {
+    const blogs = document.querySelectorAll('.blog-filter');
+    if (!blogs.length) return;
 
-    const scroll = document.querySelector('#works-filter');
+    const scroll = document.querySelector('#blogs-filter');
     if (!scroll) return;
 
     applyContainerPadding(scroll);
-
-    filterWorks('all');
+    filterBlogs('all');
 }
 
-window.filterWorks = function (direction) {
-    const cards = document.querySelectorAll('.work-card');
+window.filterBlogs = function (direction) {
+    const cards = document.querySelectorAll('.blog-card');
 
     cards.forEach((card) => {
-        const wrapper = card.parentElement; // div.swiper-slide или просто div в grid
         if (direction === 'all' || card.dataset.direction === direction) {
-            wrapper.style.display = '';
+            card.classList.remove('!hidden');
         } else {
-            wrapper.style.display = 'none';
+            card.classList.add('!hidden');
         }
     });
 
-    document.querySelectorAll('.work-filter').forEach((btn) => {
+    document.querySelectorAll('.blog-filter').forEach((btn) => {
         btn.classList.remove('bg-basic-brown', 'text-white');
         btn.classList.add(
             'hover:border-extra-light-brown',

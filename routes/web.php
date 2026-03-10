@@ -1,80 +1,28 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
-Route::get( '/', function () {
-    return view( 'pages.home' );
-} )->name( 'home' );
+Route::view('/', 'pages.home')->name('home');
+Route::view('dms', 'pages.dms')->name('dms');
+Route::view('about', 'pages.about')->name('about');
+Route::view('prices', 'pages.prices')->name('prices');
+Route::view('doctors', 'pages.doctors')->name('doctors');
+Route::view('contacts', 'pages.contacts')->name('contacts');
+Route::view('promotions', 'pages.promotions')->name('promotions');
+Route::view('blog', 'pages.blog')->name('blog');
+Route::view('works', 'pages.works')->name('works');
+Route::view('vacancies', 'pages.vacancies')->name('vacancies');
+Route::view('thanks', 'pages.thanks')->name('thanks');
 
-$services = ['stomatology', 'cosmetology', 'kids'];
+Route::get('doctors/{doctor}', [DoctorController::class, 'show'])->name('doctor');
+Route::get('blog/{article}', [BlogController::class, 'show'])->name('article');
 
-foreach ($services as $service) {
-    Route::get($service, fn() => view('pages.services.' . $service, compact('service')))
-         ->name($service);
-
-    Route::get($service . '/{subservice}', function ($subservice) use ($service) {
-        return view('pages.subservice', compact('service', 'subservice'));
-    })->name($service . '.subservice');
+foreach (['stomatology', 'cosmetology', 'kids'] as $service) {
+    Route::get($service, [ServiceController::class, 'show'])->defaults('service', $service)->name($service);
+    Route::get($service . '/{subservice}', [ServiceController::class, 'subservice'])->defaults('service', $service)->name($service . '.subservice');
 }
-
-Route::get('doctors/{doctor}', function ($doctor) {
-    return view('pages.doctor-page', compact('doctor'));
-})->name('doctor');
-
-Route::get('thanks', function () {
-    return view('pages.thanks');
-})->name('thanks');
-
-Route::get( 'cosmetology', function () {
-    return view( 'pages.services.cosmetology' );
-} )->name( 'cosmetology' );
-
-Route::get( 'dms', function () {
-    return view( 'pages.dms' );
-} )->name( 'dms' );
-
-Route::get( 'about', function () {
-    return view( 'pages.about' );
-} )->name( 'about' );
-
-Route::get( 'prices', function () {
-    return view( 'pages.prices' );
-} )->name( 'prices' );
-
-Route::get( 'doctors', function () {
-    return view( 'pages.doctors' );
-} )->name( 'doctors' );
-
-Route::get( 'contacts', function () {
-    return view( 'pages.contacts' );
-} )->name( 'contacts' );
-
-Route::get( 'promotions', function () {
-    return view( 'pages.promotions' );
-} )->name( 'promotions' );
-
-Route::get( 'blog', function () {
-    return view( 'pages.blog' );
-} )->name( 'blog' );
-
-Route::get('blog/{article}', function ($article) {
-    return view('pages.blog-page', compact('article'));
-})->name('article');
-
-Route::get( 'works', function () {
-    return view( 'pages.works' );
-} )->name( 'works' );
-
-Route::get( 'reviews', function () {
-    return view( 'pages.reviews' );
-} )->name( 'reviews' );
-
-Route::get( 'vacancies', function () {
-    return view( 'pages.vacancies' );
-} )->name( 'vacancies' );
-
-Route::view('/{service}/{subservice}', 'pages.subservice');
-
-//Route::get('second-page',[\App\Http\Controllers\SecondController::class, 'second']);
 
 require __DIR__ . '/settings.php';

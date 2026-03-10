@@ -5,6 +5,7 @@
     'descr' => null,
     'segmentImg' => null,
     'benefits' => null,
+    'doctor' => null,
 ])
 
 <section class="overflow-hidden bg-light-white">
@@ -31,7 +32,7 @@
                     />
                 </div>
 
-                <x-main.first-section.buttons />
+                <x-main.first-section.buttons :doctor="$doctor" />
             </div>
 
             <x-common.services.main-section.img

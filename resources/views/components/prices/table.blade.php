@@ -3,7 +3,7 @@
 ])
 
 <table class="w-full border-collapse">
-    <x-common.prices-head />
+    <x-common.subservices.prices.prices-head />
 
     <tbody>
         @foreach ($prices as $price)

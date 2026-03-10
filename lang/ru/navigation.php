@@ -15,7 +15,6 @@ return [
         'contacts'   => 'Контакты',
         'vacancies'  => 'Вакансии',
         'blog'       => 'Блог',
-        'reviews'    => 'Отзывы',
         'promotions' => 'Акции',
     ]
 ];

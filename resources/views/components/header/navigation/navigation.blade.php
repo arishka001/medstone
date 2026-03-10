@@ -16,7 +16,7 @@
 
     <ul class="flex w-full flex-col gap-2.5 sm:gap-5 xl:flex-row">
         @foreach (__('navigation.part2') as $link => $name)
-            @if (in_array($link, ['contacts', 'vacancies', 'blog', 'reviews']))
+            @if (in_array($link, ['contacts', 'vacancies', 'blog']))
                 <li
                     class="nav-link transition-colors duration-200 hover:text-light-brown xl:hidden"
                 >

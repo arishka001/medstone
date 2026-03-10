@@ -1,5 +1,5 @@
 <table class="w-full table-fixed border-collapse">
-    <x-common.prices-head />
+    <x-common.subservices.prices.prices-head />
 
     @if (! empty($segment['general-prices-list']))
         <tbody id="general" class="prices-body hidden">

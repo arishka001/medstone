@@ -1,4 +1,5 @@
 <div
+    onclick="openModal('vacancy-modal')"
     class="group hidden cursor-pointer flex-col items-center justify-between rounded-3xl bg-[#FBFBFB] p-5 lg:flex"
 >
     <div class="flex flex-col gap-4">
@@ -25,6 +26,7 @@
     </div>
 
     <x-buttons.callback-btn
+        onclick="openModal('vacancy-modal')"
         class="mt-auto group-hover:bg-basic-brown group-hover:text-light-white"
     >
         {{ __('pages/doctors.vacancy-card.btn') }}
