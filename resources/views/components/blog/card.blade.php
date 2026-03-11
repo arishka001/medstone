@@ -15,7 +15,7 @@
     <img
         src="{{ Vite::image('blog/' . $item['img']) }}"
         alt=""
-        class="h-57.5 w-full rounded-2xl object-cover object-top xl:h-68.75 2xl:h-85"
+        class="h-full w-full rounded-2xl object-cover object-top xl:h-70 2xl:h-85"
     />
 
     <h3 class="text-xl/[100%]">
