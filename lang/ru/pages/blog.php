@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'meta' => [
+        'title' => 'Блог MEDSTONE',
+        'description' => 'Полезные статьи о здоровье, красоте и медицине от специалистов клиники MEDSTONE.',
+    ],
     'breadcrumb' => 'Блог',
     'btn-more-blogs' => 'Показать больше статей',
     'btn-details' => 'Подробнее',

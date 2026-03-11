@@ -3,13 +3,13 @@
 <button
     {{
         $attributes->merge([
-            'class' => 'flex h-12.5 text-nowrap w-full cursor-pointer items-center justify-center rounded-3xl border border-basic-brown text-base/[100%] px-5 transition-all duration-200 hover:bg-basic-brown hover:text-white',
+            'class' => 'flex h-12.5 text-nowrap w-full cursor-pointer items-center justify-center rounded-3xl border border-basic-brown text-base/[100%] px-5 transition-all duration-200 hover:bg-basic-brown hover:text-white active:bg-basic-brown active:text-white',
         ])
     }}
 >
     <div class="flex items-center justify-center gap-2">
         <x-svg.plus
-            class="{{ $plusClass }}bg-basic-brown text-light-white group-hover:text-basic-brown group-hover:bg-light-white"
+            class="{{ $plusClass }}bg-basic-brown text-light-white group-hover:text-basic-brown group-hover:bg-light-white group-active:text-basic-brown group-active:bg-light-white"
         />
 
         {{ trim($slot) !== '' ? $slot : 'Записаться на прием' }}

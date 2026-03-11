@@ -1,4 +1,8 @@
-<x-layouts.app>
+<x-layouts.app
+    id="about-clinic"
+    title="{{__('pages/about.meta.title')}}"
+    description="{{__('pages/about.meta.description')}}"
+>
     <x-common.services.main-section.main-section page="about" />
 
     <x-common.services.about.about />

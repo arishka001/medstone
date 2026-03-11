@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'meta' => [
+        'title' => 'ДМС MEDSTONE',
+        'description' => 'Обслуживание по полисам добровольного медицинского страхования в клинике MEDSTONE.',
+    ],
     'breadcrumb' => 'Лечение по ДМС',
     'main-section' => [
         'title' => [

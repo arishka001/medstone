@@ -12,6 +12,12 @@ class DoctorController extends Controller
         $item = collect($doctors)->first(fn($d) => $d['slug'] === $doctor);
         abort_if(!$item, 404);
 
-        return view('pages.doctor-page', compact('doctor', 'item'));
+        return view('pages.doctor-page', [
+            'doctor' => $doctor,
+            'item' => $item,
+            'title' => $item['surname'] . ' ' . $item['name'] . ' — MEDSTONE',
+            'description' => $item['descr'],
+        ]);
+
     }
 }

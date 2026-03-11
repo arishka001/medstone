@@ -1,4 +1,8 @@
-<x-layouts.app id="home">
+<x-layouts.app
+    id="home"
+    title="{{__('pages/home.meta.title')}}"
+    description="{{__('pages/home.meta.description')}}"
+>
     <x-main.first-section.first-section />
 
     <x-common.about.about />

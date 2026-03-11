@@ -6,9 +6,9 @@
     }}
 >
     <x-svg.arrow
-        class="swiper-prev rotate-180 rounded-xl hover:bg-basic-brown hover:text-white"
+        class="swiper-prev rotate-180 rounded-xl hover:bg-basic-brown hover:text-white active:bg-basic-brown active:text-white"
     />
     <x-svg.arrow
-        class="swiper-next rounded-xl hover:bg-basic-brown hover:text-white"
+        class="swiper-next rounded-xl hover:bg-basic-brown hover:text-white active:bg-basic-brown active:text-white"
     />
 </div>

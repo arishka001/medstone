@@ -1,4 +1,7 @@
-<x-layouts.app>
+<x-layouts.app
+    title="{{__('pages/contacts.meta.title')}}"
+    description="{{__('pages/contacts.meta.description')}}"
+>
     <section class="pt-7.5 sm:pt-10 lg:pt-15">
         <div class="container flex flex-col gap-10 lg:gap-15">
             <x-common.page-header

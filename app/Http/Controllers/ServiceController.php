@@ -8,7 +8,10 @@ class ServiceController extends Controller
 {
     public function show($service)
     {
-        return view('pages.services.' . $service, compact('service'));
+        $title = __('pages/' . $service . '.meta.title');
+        $description = __('pages/' . $service . '.meta.description');
+
+        return view('pages.services.' . $service, compact('service','title','description'));
     }
 
     public function subservice($subservice, $service)
@@ -17,6 +20,12 @@ class ServiceController extends Controller
         $segment = collect($segments)->first(fn($item) => $item['slug'] === $subservice);
         abort_if(!$segment, 404);
 
-        return view('pages.subservice', compact('service', 'subservice', 'segment'));
+        return view('pages.subservice', [
+            'service' => $service,
+            'subservice' => $subservice,
+            'segment' => $segment,
+            'title' => $segment['title'] . ' — MEDSTONE',
+            'description' => $segment['descr'],
+        ]);
     }
 }

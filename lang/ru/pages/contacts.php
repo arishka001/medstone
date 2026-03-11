@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'meta' => [
+        'title' => 'Контакты MEDSTONE',
+        'description' => 'Адрес, телефон и время работы клиники MEDSTONE. Свяжитесь с нами или запишитесь на приём.',
+    ],
     'breadcrumb' => 'Контакты',
     'download-btn' => 'Скачать реквизиты',
     'title'=> [

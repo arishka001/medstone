@@ -12,6 +12,11 @@ class BlogController extends Controller
         $item = collect($blogs)->first(fn($d) => $d['slug'] === $article);
         abort_if(!$item, 404);
 
-        return view('pages.blog-page', compact('article', 'item'));
+        return view('pages.blog-page', [
+            'article' => $article,
+            'item' => $item,
+            'title' => $item['name'] . ' — MEDSTONE',
+            'description' => $item['descr'],
+        ]);
     }
 }

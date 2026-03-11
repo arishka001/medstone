@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'meta' => [
+        'title' => 'Врачи MEDSTONE',
+        'description' => 'Наши специалисты — опытные врачи с высокой квалификацией. Познакомьтесь с командой клиники MEDSTONE.',
+    ],
     'breadcrumb' => 'Врачи',
     'mini-text' => 'Врачи',
     'btn-more-doctors' =>'Показать всех врачей',

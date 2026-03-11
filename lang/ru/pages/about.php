@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'meta' => [
+        'title' => 'О клинике MEDSTONE',
+        'description' => 'Узнайте больше о клинике MEDSTONE — нашей команде, ценностях и подходе к лечению.',
+    ],
     'breadcrumb' => 'О нас',
     'main-section' => [
         'title' => [

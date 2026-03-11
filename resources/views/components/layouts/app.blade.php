@@ -1,3 +1,4 @@
+@props(['title' => 'MEDSTONE', 'description' => ''])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -5,7 +6,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Главная</title>
+        <title>{{ $title }}</title>
         <meta name="description" content="" />
 
         <meta name="thanks-url" content="{{ route('thanks') }}" />

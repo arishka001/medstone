@@ -1,6 +1,11 @@
 <?php
 
 return [
+    'meta' => [
+        'title' => 'Цены MEDSTONE',
+        'description' => 'Актуальные цены на услуги клиники MEDSTONE. Стоматология, косметология, диагностика.',
+    ],
+
     'breadcrumb' => 'Цены',
     'title' => 'Цены',
 

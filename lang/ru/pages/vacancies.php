@@ -1,8 +1,11 @@
 <?php
  return [
+     'meta' => [
+         'title' => 'Вакансии MEDSTONE',
+         'description' => 'Открытые вакансии в клинике MEDSTONE. Присоединяйтесь к нашей команде профессионалов.',
+     ],
      'breadcrumb' => 'Вакансии',
      'title'=> 'Вакансии',
-
      'btn-apply' => 'Откликнуться',
 
      'title-responsibilities' => 'Обязанности:',

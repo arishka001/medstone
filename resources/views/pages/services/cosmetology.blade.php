@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-layouts.app :title="$title" :description="$description">
     <x-common.services.main-section.main-section page="cosmetology" />
 
     <x-common.services.segments.section-segments page="cosmetology" />

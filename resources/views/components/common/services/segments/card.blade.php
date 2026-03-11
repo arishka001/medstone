@@ -3,7 +3,7 @@
 @endphp
 
 <li
-    class="group flex w-full rounded-3xl bg-[#FBFBFB] p-5 transition-all duration-200 hover:shadow-custom lg:justify-between lg:gap-11.25 lg:p-7.5 xl:gap-13 2xl:gap-50"
+    class="group flex w-full rounded-3xl bg-[#FBFBFB] p-5 transition-all duration-200 hover:shadow-custom active:shadow-custom lg:justify-between lg:gap-11.25 lg:p-7.5 xl:gap-13 2xl:gap-50"
 >
     <div class="flex w-full flex-col gap-5 lg:flex-row lg:gap-10">
         <div class="flex items-center justify-between">
@@ -32,7 +32,7 @@
             @foreach ($item['sublist'] as $segment)
                 <a
                     href="{{ $segmentUrl . '#' . $segment['main']['anchor'] }}"
-                    class="inline-block h-fit w-fit rounded-xl bg-[#F6F6F6] px-3 py-1.5 text-base/[90%] text-extra-light-brown transition-colors duration-200 hover:bg-[#EDEDED]"
+                    class="inline-block h-fit w-fit rounded-xl bg-[#F6F6F6] px-3 py-1.5 text-base/[90%] text-extra-light-brown transition-colors duration-200 hover:bg-[#EDEDED] active:bg-[#EDEDED]"
                 >
                     {!! $segment['main']['name'] !!}
                 </a>

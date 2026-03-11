@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'meta' => [
+        'title' => 'Стоматология MEDSTONE',
+        'description' => 'Профессиональное лечение зубов в клинике MEDSTONE. Терапия, хирургия, ортодонтия, имплантация.',
+    ],
     'breadcrumb' => 'Стоматология',
     'main-section' => [
         'title' => [
