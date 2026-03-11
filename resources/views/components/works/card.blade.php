@@ -6,7 +6,7 @@
         data-direction="{{ $item['direction'] }}"
     >
         <div
-            class="flex h-57.5 w-full overflow-hidden rounded-3xl xl:h-68.75 2xl:h-85"
+            class="flex h-full w-full overflow-hidden rounded-3xl xl:h-70 2xl:h-85"
         >
             <img
                 src="{{ Vite::image('works/' . $item['img']) }}"

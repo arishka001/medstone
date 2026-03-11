@@ -2,7 +2,7 @@
     'title',
 ])
 
-<div class="container flex flex-col gap-5">
+<div {{ $attributes->merge(['class' => 'flex flex-col gap-5']) }}>
     <x-common.breadscrumbs />
     <x-typography.main-header>
         {!! $title !!}

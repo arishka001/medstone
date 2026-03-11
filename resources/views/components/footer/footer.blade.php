@@ -2,17 +2,17 @@
     <x-footer.form.section-form />
 
     <div class="container flex flex-col gap-10 lg:gap-15">
-        @if (! request()->routeIs('contacts', 'thanks'))
-            <x-typography.second-header
-                class="lg:flex-col! lg:gap-5!"
-                kicker="{{ __('footer.contacts.mini-text') }}"
-                title="{{ __('footer.contacts.title') }}"
-            />
+        {{-- @if (! request()->routeIs('contacts', 'thanks')) --}}
+        {{-- <x-typography.second-header --}}
+        {{-- class="lg:flex-col! lg:gap-5!" --}}
+        {{-- kicker="{{ __('footer.contacts.mini-text') }}" --}}
+        {{-- title="{{ __('footer.contacts.title') }}" --}}
+        {{-- /> --}}
 
-            <x-footer.contacts />
+        {{-- <x-footer.contacts /> --}}
 
-            <x-footer.map />
-        @endif
+        {{-- <x-footer.map /> --}}
+        {{-- @endif --}}
 
         <div class="flex flex-col gap-5 lg:gap-10">
             <div
